@@ -30,15 +30,16 @@ a {
 
 /* UTILS */
 
-.container {
-  max-width: 900px;
-  padding: 0;
+.clearfix::after {
+  content: "";
+  display: block;
+  clear: both;
 }
-
 /* MAIN */
 main {
-  display: flex;
-  justify-content: center;
+  text-align: center;
+  margin: 0;
+  margin: 0 150px;
 }
 
 .title {
@@ -51,23 +52,25 @@ main {
   text-align: center;
 }
 
-/* row */
-.row:after {
-  display: block;
-  clear: both;
+.card-container {
+  margin-top: 50px;
 }
 
-/* colums */
-.col-1-3 {
-  width: calc(100% / 3);
-  min-height: 100px;
-
-  /* debug */
-  background-color: red;
-}
 /* cards */
 .card {
   background-color: black;
+  width: calc(100% / 3 - 20px);
+  margin: 10px;
+
+  float: left;
+
+  /* debug */
+  min-height: 90px;
+}
+
+.informations {
+  padding: 10px 10px 10px 100px;
+  text-align: start;
 }
 
 .name,
@@ -76,7 +79,16 @@ main {
 }
 
 .profile-picture {
+  height: 90px;
   float: left;
+}
+
+.name {
+  font-size: 15px;
+}
+
+.profession {
+  padding: 5px 0 5px 0;
 }
 
 .email-address {
