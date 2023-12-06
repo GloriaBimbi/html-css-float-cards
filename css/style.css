@@ -63,9 +63,6 @@ main {
   margin: 10px;
 
   float: left;
-
-  /* debug */
-  min-height: 90px;
 }
 
 .informations {
